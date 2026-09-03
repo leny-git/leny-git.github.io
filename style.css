@@ -4,7 +4,6 @@
     --border-color: #21262d;
     --accent-green: #238636;
     --terminal-green: #3fb950;
-    --verified-blue: #38bdf8;
     --text-primary: #c9d1d9;
     --text-muted: #8b949e;
 }
@@ -79,21 +78,24 @@ body {
     color: #fff;
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 8px;
 }
 
+/* Orijinal Mavi Tik Rozet Parlaması */
 .verified-badge {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 18px;
-    height: 18px;
-    background-color: var(--verified-blue);
-    color: #000;
-    font-size: 0.65rem;
-    font-weight: bold;
-    border-radius: 50%;
-    box-shadow: 0 0 10px rgba(56, 189, 248, 0.6);
+    width: 22px;
+    height: 22px;
+    filter: drop-shadow(0 0 6px #1d9bf0) drop-shadow(0 0 12px rgba(29, 155, 240, 0.6));
+    animation: blue-glow 2s infinite alternate;
+}
+
+@keyframes blue-glow {
+    0% {
+        filter: drop-shadow(0 0 4px #1d9bf0) drop-shadow(0 0 8px rgba(29, 155, 240, 0.4));
+    }
+    100% {
+        filter: drop-shadow(0 0 10px #1d9bf0) drop-shadow(0 0 18px rgba(29, 155, 240, 0.9));
+    }
 }
 
 .handle {
