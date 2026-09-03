@@ -3,25 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yiğit Sanchez | Portfolio</title>
+    <title>Yiğit Sanchez | Security & Dev Terminal</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="card">
-        <div class="avatar-container">
-            <img src="avatar.jpg" alt="Profile Picture" class="avatar">
+    <div class="terminal-container">
+        <div class="terminal-header">
+            <div class="buttons">
+                <span class="btn red"></span>
+                <span class="btn yellow"></span>
+                <span class="btn green"></span>
+            </div>
+            <div class="title">yigit@security-station:~</div>
         </div>
-        <h1>Yiğit Sanchez</h1>
-        <span class="username">@f4ck_yigit</span>
 
-        <p class="bio">
-            16 y/o Passionate Developer | Cybersecurity & Python Specialist | Learning JS & Networks | Multilingual 🇹🇷🇬🇧🇷🇺🇩🇪
-        </p>
+        <div class="terminal-body">
+            <div class="profile-section">
+                <img src="avatar.jpg" alt="Yiğit Sanchez" class="avatar">
+                <div class="profile-info">
+                    <h1>Yiğit Sanchez <span class="badge">PRO</span></h1>
+                    <p class="handle">@f4ck_yigit</p>
+                    <div class="status"><span class="pulse"></span> System Operational / Learning Mode</div>
+                </div>
+            </div>
 
-        <div class="links">
-            <a href="https://github.com" target="_blank">GitHub</a>
-            <a href="mailto:contact@example.com">İletişim</a>
+            <div class="console-box">
+                <p><span class="prompt">root@yigit:~#</span> <span id="typed-text"></span><span class="cursor">|</span></p>
+            </div>
+
+            <div class="section-title">> TARGET_SKILLS & STACK</div>
+            <div class="tags">
+                <span class="tag python">Python</span>
+                <span class="tag js">JavaScript</span>
+                <span class="tag linux">Kali Linux</span>
+                <span class="tag sec">Cybersecurity</span>
+                <span class="tag net">Networking</span>
+            </div>
+
+            <div class="section-title">> LANGUAGES_IN_PROGRESS</div>
+            <div class="lang-grid">
+                <div class="lang-item">🇹🇷 TR <span>Native</span></div>
+                <div class="lang-item">🇬🇧 EN <span>Advanced</span></div>
+                <div class="lang-item">🇷🇺 RU <span>Learning</span></div>
+                <div class="lang-item">🇩🇪 DE <span>Learning</span></div>
+            </div>
+
+            <div class="section-title">> QUICK_COMMANDS</div>
+            <div class="command-box">
+                <code>git clone https://github.com/f4ck_yigit/main.git</code>
+            </div>
+
+            <div class="actions">
+                <a href="https://github.com" target="_blank" class="cyber-btn">GitHub Profile</a>
+                <a href="mailto:contact@yigit.dev" class="cyber-btn secondary">Contact Operator</a>
+            </div>
         </div>
     </div>
+
+    <script>
+        // Canlı Yazı Efekti
+        const text = "16 y/o Passionate Developer | Cybersecurity & Python Specialist | Learning JS & Networks | Multilingual";
+        let index = 0;
+        function typeEffect() {
+            if (index < text.length) {
+                document.getElementById("typed-text").innerHTML += text.charAt(index);
+                index++;
+                setTimeout(typeEffect, 35);
+            }
+        }
+        window.onload = typeEffect;
+    </script>
 </body>
 </html>
