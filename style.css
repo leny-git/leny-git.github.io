@@ -4,6 +4,7 @@
     --border-color: #21262d;
     --accent-green: #238636;
     --terminal-green: #3fb950;
+    --verified-blue: #38bdf8;
     --text-primary: #c9d1d9;
     --text-muted: #8b949e;
 }
@@ -76,15 +77,23 @@ body {
 .profile-info h1 {
     font-size: 1.3rem;
     color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
-.badge {
-    font-size: 0.6rem;
-    background: var(--accent-green);
-    color: #fff;
-    padding: 2px 6px;
-    border-radius: 4px;
-    vertical-align: middle;
+.verified-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    background-color: var(--verified-blue);
+    color: #000;
+    font-size: 0.65rem;
+    font-weight: bold;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.6);
 }
 
 .handle {
